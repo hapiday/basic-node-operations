@@ -1,0 +1,14 @@
+{
+  "name": "basic-node-operations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bash.js",
+  "scripts": {
+      "server": "nodemon server.js"
+    },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

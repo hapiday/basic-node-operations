@@ -1,0 +1,52 @@
+1. Run the commands sort, wc and uniq on the commands.js file.
+Explain how they work and what the output was.
+
+Answer:
+sort : output the contents of the file order by alphabet based on each indented bloc.
+
+wc : prints the number of lines, words and characters inside of the file.
+The result is 46 lines, 121 words and 1205 characters.
+
+uniq : returns the file contents removing duplicated lines.
+
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js.
+Explain what the output was and why the specific data was outputted.
+
+Answer:
+INPUT: cat commands.js | wc 
+OUTPUT: 43     121    1202
+
+INPUT: uniq commands.js | wc
+OUTPUT: 43     121    1202
+
+cat and uniq produces the same output when piped with wc.
+This means there is no duplication in the commands.js file.
+
+6.
+
+function reverseWord(word){
+	var stack = [];
+	for(let i=0; word.length > i; i++){
+		stack.push(word[i]);
+	}
+
+	var reversed = '';
+	while(stack.length > 0){
+		var letter = stack.pop();
+		reversed += letter;
+	}
+return reversed;
+}
+
+
+function reverse(phrase){
+    var words = phrase.split(' ');
+    var allPhrases = '';
+    words.forEach(function(word){
+        var reversedWord = reverseWord(word);
+        console.log(reversedWord);
+		allPhrases = allPhrases + ' ' + reversedWord;
+    });
+return allPhrases;
+ }
